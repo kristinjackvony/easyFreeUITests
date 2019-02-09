@@ -11,5 +11,8 @@
     "url": "easyFreeUITests"
   },
   "author": "Kristin Jackvony",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "chromedriver": "^2.46.0"
+  }
 }

@@ -1,9 +1,14 @@
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
+var chrome = require('selenium-webdriver/chrome');
+var path = require('chromedriver').path;
+
+var service = new chrome.ServiceBuilder(path).build();
+chrome.setDefaultService(service);
 
 var driver = new webdriver.Builder()
-    .forBrowser('chrome')
+    .withCapabilities(webdriver.Capabilities.chrome())
     .build();
 
 driver.get('http://www.google.com');
